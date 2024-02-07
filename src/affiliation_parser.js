@@ -28,6 +28,19 @@ if(process.argv.length != 3){
 //  { abbr:'fl', title:'The University of Michigan-Flint'    }
 //];
 
+/////////////////////////////////////////
+//
+// titles:
+//
+/////////////////////////////////////////
+const title = [
+  { key:'Professsor emerit(us|a)', name:'Professor Emeritus/a' },
+  { key:'Assistant Professor', name:'Assistant Professor' },
+  { key:'Associate Professor', name:'Associate Professor' },
+  { key:'Professor', name:'Professor' },
+  { key:'Lecturer', name:'Lecturer' }
+];
+
 /////////////////////////////////////////////////////////////////////////////////////
 //
 // Schools and college by campus abbreviation:
@@ -202,7 +215,15 @@ function processLine(line){
       const pattern = campus[i].school[j].key;
       //console.log(`TESTING ${item}...`);
       if(line.match(pattern)){
-        console.log(`{ 'campus':'${campus[i].abbr}', school:'${campus[i].school[j].name}', 'line':'${line}' }`);
+        // Try to nab title too:
+        let is_faculty=false;
+        for(let k=0;k<title.length;k++){
+          if(line.match(title[k])){
+            is_faculty=true;
+            break;
+          }
+        }
+        console.log(`{ 'faculty_staff':'${is_faculty?'faculty':'staff'}' 'campus':'${campus[i].abbr}', school:'${campus[i].school[j].name}', 'line':'${line}' }`);
         return; 
       }
     }
