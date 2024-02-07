@@ -37,7 +37,12 @@ const campus = [
   { abbr:'aa',
     name:'Ann Arbor',
     school:[
-      { key:'College of Architecture (and|&) Urban Planning', name:'College of Architecture and Urban Planning' },
+      { key:'College of Architecture (and|&) Urban Planning', name:'Taubman College of Architecture and Urban Planning' },
+      { key:'School of Art (and|&) Design', name:'Stamps School of Art and Design' },
+      { key:'School of Business', name:'Ross School Business' },
+      { key:'School of Education', name:'Marsal Family School of Education' },
+      { key:'School of Information', name:'School of Information' },
+      { key:'School of Kinesiology', name:'School of Kinesiology' },
       { key:'College of Engineering', name:'College of Engineering' },
       { key:'College of Literature, Science,? and the Arts', name:'College of Literature, Science and the Arts' },
       { key:'College of Pharmacy', name:'College of Pharmacy' },
@@ -46,12 +51,14 @@ const campus = [
       { key:'Medical School|University of Michigan Hospitals|Michigan Medicine', name:'Medical School' },
       { key:'National Center for Institutional Diversity', name:'National Center for Institutional Diversity' },
       { key:'Office of the Vice President for Research', name:'Office of the Vice President for Research' },
+      { key:'Rackham( School of Graduate Studies)?', name:'Rackham School of Graduate Studies' },
       { key:'School for Environment (and|&) Sustainability', name:'School for Environment and Sustainability' },
       { key:'School of Dentistry', name:'School of Dentistry' },
       { key:'School of Education', name:'School of Education' },
       { key:'School of Information', name:'School of Information' },
-      { key:'School of Music, Theatre (and|&) Dance', name:'School of Music, Theatre and Dance' },
+      { key:'School of Music, Theat(re|er) (and|&) Dance', name:'School of Music, Theatre and Dance' },
       { key:'School of Nursing', name:'School of Nursing' },
+      { key:'School of Pharmacy', name:'School of Pharmacy' },
       { key:'School of Public Health', name:'School of Public Health' },
       { key:'School of Public Policy', name:'School of Public Policy' },
       { key:'School of Social Work', name:'School of Social Work' },
@@ -62,15 +69,20 @@ const campus = [
     name:'Dearborn',
     school:[    
       { key:'College of Arts, Sciences (and|&) Letters', name:'College of Arts, Sciences and Letters' },
-      { key:'College of Education, Health (and|&) Human Services', name:'College of Education, Health and Human Services' },
+      { key:'College of Business', name:'College of Business' },
+      { key:'College of Education, Health,? (and|&) Human Services', name:'College of Education, Health and Human Services' },
       { key:'College of Engineering (and|&) Computer Science', name:'College of Engineering and Computer Science' }
     ],
   },
   { abbr:'fl',
     name:'Flint',
     school:[
+      { key:'College of Arts (and|&) Sciences|College of Arts,? Sciences (and|&) Education', 
+        name:'College of Arts, Sciences and Education' },
+      { key: 'School of Management', name:'School of Management' },
+      { key: 'College of Health Sciences', name:'College of Health Sciences' },
+      { key: 'School of Nursing', name:'School of Nursing' },
       { key:'College of Innovation (and|&) Technology', name:'College of Innovation and Technology' },
-      { key:'College of Arts (and|&) Sciences', name:'College of Arts and Sciences' }
      ]
   }
 ];
